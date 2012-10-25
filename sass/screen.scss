@@ -28,6 +28,11 @@
 $brandcolor: #00b3b0;
 $margin: 16px;
 
+$sitefont: chaparral pro;
+
+* {
+   font-family: $sitefont !important;
+}
 .brand {
   color: $brandcolor;
 }
