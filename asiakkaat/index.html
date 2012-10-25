@@ -7,7 +7,7 @@
       <link href="../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <![endif]-->
 </head>
-<body>
+<body onload="drawCanvas()">
 
 <a class="logo" href="http://www.solita.fi">Solita</a>
     Palvelut
@@ -19,23 +19,32 @@
 
 <hr/>
 
-
-<img id="matkaopasImg" src="../img/matkaopas.jpg" width="500" height="340"/>
-
-<canvas id="matkaopasCanvas" width="520" height="350" style="border:1px solid #000000;">
+<canvas id="matkaopasCanvas" width="800" height="350" style="background-color:#000000;">
+Your browser doesn't support HTML5 Canvas!
 </canvas>
 
-
-
 <script>
-var c=document.getElementById("matkaopasCanvas");
-var ctx=c.getContext("2d");
-var img=document.getElementById("matkaopasImg");
-ctx.drawImage(img, 10, 10);
-//ctx.fillStyle="#FFFFFF";
-//ctx.fillRect(0,0,150,75);
-</script>
+function drawCanvas () {
+  var c   = document.getElementById("matkaopasCanvas");
+  var ctx = c.getContext("2d");
+  var img = new Image();
+  img.src = "../img/matkaopas.jpg";
+  img.onload = function () {
+    ctx.drawImage(img, 300, 0);
+  };
 
+  ctx.fillStyle="#FFFFFF";
+  ctx.fillRect(50, 100, 200, 170);
+
+  ctx.beginPath();
+  ctx.moveTo(250, 270);
+  ctx.lineTo(300, 270);
+  ctx.lineTo(250, 200);
+  ctx.lineTo(250, 270);
+  ctx.fill();
+  ctx.closePath();
+}
+</script>
 
 <div style="background-color: black; padding: 30px;">
   <img src="../img/ellipsin-puolikas.png" />
