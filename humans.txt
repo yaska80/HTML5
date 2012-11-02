@@ -1,0 +1,34 @@
+/* humanstxt.org */
+
+/* TEAM */
+
+Solita Developers co Antti-Jussi Kovalainen
+Layout, markup, CSS and Javascript
+http://www.ajk.im/
+
+
+
+
+/* THANKS */
+
+AJK (http://ajk.im/) for being awesome.
+
+
+
+
+/* SITE */
+
+TECHNOLOGY STACK
+
+SASS              http://sass-lang.com/
+
+FONTS
+
+Open Sans         http://www.google.com/webfonts/specimen/Open+Sans
+Amatic SC         http://www.google.com/webfonts/specimen/Amatic+SC
+
+
+ICONS
+
+
+ETC.

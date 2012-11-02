@@ -1,110 +1,218 @@
-<!DOCTYPE HTML>
-<html>
+Ôªø<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="no-js ie iem7"><![endif]-->
+<!--[if lt IE 7]><html class="no-js ie ie6 oldie" lang="en"><![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js ie ie7" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js ie ie8" lang="en"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
-  <link href="../css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <link href="../css/print.css" media="print" rel="stylesheet" type="text/css" />
-  <!--[if IE]>
-      <link href="../css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <![endif]-->
+    <meta charset="utf-8" />
+    <title>Asiakkaat with ajk&rsquo;s template</title>
+
+    <meta name="description" content="This is ajk&rsquo;s template" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--Microsoft. Delete if not required -->
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="author" href="humans.txt" />
+
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <!-- Print needs to be in a separate file for them to work in IE7/8 -->
+    <link rel="stylesheet" media="print" href="../css/print.css">
+
+    <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Google Web Fonts - Open Sans -->
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Open+Sans:400italic,600italic,700italic,400,700,600,300:latin', 'Open+Sans+Condensed:700:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })(); </script>
 </head>
-<body>
+<body class="no-grid">
 
-<a class="logo" href="http://www.solita.fi">Solita</a>
-    Palvelut
-    Asiakkaat
-    Yritys
-    Ajankohtaista
-    Ura
-    Yhteystiedot
+<header>
+    <div class="wrapper">
+        <a class="logo" href="http://www.solita.fi">Solita</a>
+            Palvelut
+            Asiakkaat
+            Yritys
+            Ajankohtaista
+            Ura
+            Yhteystiedot
 
-<hr/>
+    </div>
+</header>
 
-<img src="../img/matkaopas.jpg" />
+<div class="main" role="main">
+    <div class="wrapper">
 
-<div style="background-color: black; padding: 30px;">
-  <img src="../img/ellipsin-puolikas.png" />
+    <div class="matkaopas"><canvas id="scene" width="500" height="348"></canvas><img src="../img/matkaopas.jpg" /></div>
+      <script type="text/javascript">
+          canvas = document.getElementById('scene');
+          ctx = canvas.getContext('2d');
+
+        x=10;
+        y=10;
+        width=200;
+        height=70;
+        radius=20;
+        //fill="rgb(190, 0, 0)";
+
+        
+        ctx.save();
+
+        ctx.fillStyle = '#00b3b0';
+        
+
+        ctx.beginPath();
+        ctx.moveTo(x + radius, y);
+        ctx.lineTo(x + width - radius, y);
+        ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+        ctx.lineTo(x + width, y + height - radius);
+        ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+        ctx.lineTo(x + radius, y + height);
+        ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+        ctx.lineTo(x, y + radius);
+        ctx.quadraticCurveTo(x, y, x + radius, y);
+        ctx.closePath();
+
+        ctx.fill();  
+
+        ctx.restore();
+
+      </script>
+
+      <h1>Asiakkaat</h1>
+
+      <img src="../img/case-oikeushallinto-small.jpg" />
+      Case Oikeushallinto
+      Suomalainen edunvalvonta tehokkaammaksi yhteisell√§ j√§rjestelm√§ll√§
+      Lue lis√§√§
+
+      <img src="../img/case-sponda-small.jpg" />
+      Case Sponda
+      Dialogia sis√§iseen ja ulkoiseen viestint√§√§n
+      Lue lis√§√§
+
+      <img src="../img/case-fmi-small.jpg" />
+      Case Ilmatieteen laitos
+      Nelj√§nnesmiljoonalle p√§ivitt√§iselle k√§ytt√§j√§lle tietoa s√§√§st√§ verkossa
+      Lue lis√§√§
+
+      <img src="../img/case-neot-small.jpg" />
+      Case Neot
+      Polttoainetoimitukset hallintaan √∂ljyterminaalista asiakkaalle
+      Lue lis√§√§
+
+      <img src="../img/case-kastelli-small.jpg" />
+      Case Kastelli
+      Verkkosivut ovat talovalmistajan t√§rkein palvelu- ja myyntikanava
+      Lue lis√§√§
+
+      <img src="../img/case-elisa-listing.jpg" />
+      Case Elisa
+      Intranetin hakutoiminnon uudistaminen vauhdittaa my√∂s asiakaspalvelua
+      Lue lis√§√§
+
+      <img src="../img/case-helsinki-small.jpg" />
+      Case Helsingin kaupunki
+      Ty√∂suojeludokumentoinnin s√§hk√∂ist√§misell√§ tavoitellaan miljoonas√§√§st√∂j√§
+      Lue lis√§√§
+
+      <img src="../img/case-rakennusteollisuusalan-small.jpg" />
+      Case rakennusalalta
+      J√§m√§kkyytt√§ konserniohjaukseen
+      Lue lis√§√§
+
+      <img src="../img/case-elintarvikealan-small.jpg" />
+      Case elintarviketeollisuudesta
+      Automatisoitu raportointi tukee liiketoimintayksik√∂iden p√§√§t√∂ksentekoa
+      Lue lis√§√§
+
+      <img src="../img/Case_Elmo_small.jpg" />
+      Case Lehtipiste
+      Toiminnanohjausj√§rjestelm√§ tehostaa irtonumeromyynti√§
+      Lue lis√§√§
+
+      <img src="../img/case-veripalvelu-small.jpg" />
+      Case Suomen Punaisen Ristin Veripalvelu
+      Veripalvelu pysyy pulssilla
+      Lue lis√§√§
+
+      </div>
 </div>
 
-<h1>Asiakkaat</h1>
+<footer>
+    <div class="wrapper">
+        <a class="logo" href="http://www.solita.fi">Solita</a>
+            Palvelut
+            Asiakkaat
+            Yritys
+            Ajankohtaista
+            Ura
+            Yhteystiedot
 
-<img src="../img/case-oikeushallinto-small.jpg" />
-Case Oikeushallinto
-Suomalainen edunvalvonta tehokkaammaksi yhteisell‰ j‰rjestelm‰ll‰
-Lue lis‰‰
+        Solita Oy
+        Arkadiankatu 2
+        00100 Helsinki
 
-<img src="../img/case-sponda-small.jpg" />
-Case Sponda
-Dialogia sis‰iseen ja ulkoiseen viestint‰‰n
-Lue lis‰‰
+        Solita Oy
+        Satakunnankatu 18 A
+        33210 Tampere
 
-<img src="../img/case-fmi-small.jpg" />
-Case Ilmatieteen laitos
-Nelj‰nnesmiljoonalle p‰ivitt‰iselle k‰ytt‰j‰lle tietoa s‰‰st‰ verkossa
-Lue lis‰‰
+        puh. 03-389 1380
+        fax.  03-389 1381
+        contact(at)solita.fi
+    </div>
+</footer>
 
-<img src="../img/case-neot-small.jpg" />
-Case Neot
-Polttoainetoimitukset hallintaan ˆljyterminaalista asiakkaalle
-Lue lis‰‰
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 
-<img src="../img/case-kastelli-small.jpg" />
-Case Kastelli
-Verkkosivut ovat talovalmistajan t‰rkein palvelu- ja myyntikanava
-Lue lis‰‰
+<!-- Toggle baseline grid -->
+<script>
+var root = document.body,
+    grid = 0;
+window.addEventListener('keydown', function(e) {
+    if(e.keyCode == 71) {
+        if(grid==0) {
+            removeClass(root, "no-grid");
+            addClass(root, "grid");
+            grid = 1;
+        } else {
+            removeClass(root, "grid");
+            addClass(root, "no-grid");
+            grid = 0;
+        }
+    }
+});
 
-<img src="../img/case-elisa-listing.jpg" />
-Case Elisa
-Intranetin hakutoiminnon uudistaminen vauhdittaa myˆs asiakaspalvelua
-Lue lis‰‰
+function hasClass(el, name) {
+   return new RegExp('(\\s|^)'+name+'(\\s|$)').test(el.className);
+}
 
-<img src="../img/case-helsinki-small.jpg" />
-Case Helsingin kaupunki
-Tyˆsuojeludokumentoinnin s‰hkˆist‰misell‰ tavoitellaan miljoonas‰‰stˆj‰
-Lue lis‰‰
+function removeClass(el, name)
+{
+   if (hasClass(el, name)) {
+      el.className=el.className.replace(new RegExp('(\\s|^)'+name+'(\\s|$)'),' ').replace(/^\s+|\s+$/g, '');
+   }
+}
 
-<img src="../img/case-rakennusteollisuusalan-small.jpg" />
-Case rakennusalalta
-J‰m‰kkyytt‰ konserniohjaukseen
-Lue lis‰‰
-
-<img src="../img/case-elintarvikealan-small.jpg" />
-Case elintarviketeollisuudesta
-Automatisoitu raportointi tukee liiketoimintayksikˆiden p‰‰tˆksentekoa
-Lue lis‰‰
-
-<img src="../img/Case_Elmo_small.jpg" />
-Case Lehtipiste
-Toiminnanohjausj‰rjestelm‰ tehostaa irtonumeromyynti‰
-Lue lis‰‰
-
-<img src="../img/case-veripalvelu-small.jpg" />
-Case Suomen Punaisen Ristin Veripalvelu
-Veripalvelu pysyy pulssilla
-Lue lis‰‰
-
-
-<hr/>
-<a class="logo" href="http://www.solita.fi">Solita</a>
-    Palvelut
-    Asiakkaat
-    Yritys
-    Ajankohtaista
-    Ura
-    Yhteystiedot
-
-Solita Oy
-Arkadiankatu 2
-00100 Helsinki
-
-Solita Oy
-Satakunnankatu 18 A
-33210 Tampere
-
-puh. 03-389 1380
-fax.  03-389 1381
-contact(at)solita.fi
-
-
+function addClass(el, name)
+{
+   if (!hasClass(el, name)) { el.className += (el.className ? ' ' : '') +name; }
+}
+</script>
 
 </body>
 </html>
